@@ -1,0 +1,11 @@
+Since the IRIS data already given from the library, they were just passed to the function 
+to run the experiment.
+ 
+For the voting data, first, y & n chars were replaced with 1 & 9 in order to run the 
+NBC fit and predict function -, also, one can change the labels from strings to 0,1 
+but, the NBC was implemented in a way to predict and return the classes themselves and not there
+position, e.g. with numpy return our_classes[argmax(predictions)], or with pandas by returning the classes, 
+that yields the higher prediction. Then, all rows with missing values were dropped. Finally, the data 
+were passed to the experiment function, and there the data were first shuffled, splitted in train 
+and test and passed to the inner loop, where the 2 models were trained and tested against increasing
+amount of data points. 
